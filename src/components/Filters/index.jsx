@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { prioritiesFilterChange, searchFilterChange, statusFilterChange } from '../../redux/actions';
+import filtersSlice from './filtersSlice';
 
 function Filters() {
     const [search, setSearch] = useState('');
@@ -10,12 +10,12 @@ function Filters() {
 
     const handleSearchTodo = (e) => {
         setSearch(e.target.value);
-        dispatch(searchFilterChange(e.target.value));
+        dispatch(filtersSlice.actions.searchFilterChange(e.target.value));
     };
 
     const handleFilterStatus = (e) => {
         setStatus(e.target.value);
-        dispatch(statusFilterChange(e.target.value));
+        dispatch(filtersSlice.actions.statusFilterChange(e.target.value));
     };
 
     const handlefilterPriorities = (e) => {
@@ -26,7 +26,7 @@ function Filters() {
             return [...prev, e.target.value];
         });
 
-        dispatch(prioritiesFilterChange(e.target.value));
+        dispatch(filtersSlice.actions.prioritiesFilterChange(e.target.value));
     };
 
     return (

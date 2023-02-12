@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo } from '../../redux/actions';
+import todoListSlice from '../Todo/todosSlice';
 import { v4 as uuidv4 } from 'uuid';
 import { todosRemaining } from '../../redux/selectors'
 import Todo from '../Todo'
@@ -14,7 +14,7 @@ function TodoList() {
     const handleAddTodo = (e) => {
         e.preventDefault();
         dispatch(
-            addTodo({
+            todoListSlice.actions.addTodo({
                 id: uuidv4(),
                 todoName: todoName.current.value,
                 priority: priority.current.value,

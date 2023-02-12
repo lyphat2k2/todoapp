@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleStatusTodo } from '../../redux/actions';
+import todoListSlice from './todosSlice'
 
 function Todo({id, name, priority, completed }) {
     const [checked, setChecked] = useState(completed);
@@ -8,7 +8,7 @@ function Todo({id, name, priority, completed }) {
 
     const handleCheckTodo = (e) => {
         setChecked(e.target.checked)
-        dispatch(toggleStatusTodo(id))
+        dispatch(todoListSlice.actions.toggleStatusTodo(id))
     }
 
     return (
