@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "todoName": "Buy milk",
+        "priority": "Medium",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "todoName": "Write a report",
+        "priority": "High",
+        "completed": false
+    },
+    {
+        "id": 3,
+        "todoName": "Go for a walk",
+        "priority": "Low",
+        "completed": true
+    },
+    {
+        "id": 4,
+        "todoName": "Call mom",
+        "priority": "Medium",
+        "completed": false
+    },
+    {
+        "id": 5,
+        "todoName": "Gym workout",
+        "priority": "Medium",
+        "completed": false
+    },
+    {
+        "id": 6,
+        "todoName": "Do laundry",
+        "priority": "Low",
+        "completed": true
+    },
+    {
+        "id": 7,
+        "todoName": "Read a book",
+        "priority": "Low",
+        "completed": false
+    },
+    {
+        "id": 8,
+        "todoName": "Plan a trip",
+        "priority": "Medium",
+        "completed": false,
+        "created_at": "2022-12-03T12:00:00Z"
+    },
+    {
+        "id": 9,
+        "todoName": "Meditate",
+        "priority": "Low",
+        "completed": true
+    }
+]
